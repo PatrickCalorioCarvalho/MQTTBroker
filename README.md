@@ -1,15 +1,16 @@
 # MQTTBroker
 Installation Mosquitto Rasberry Pi Zero W
-* Atualizar Pacotes
+
+# Atualizar Pacotes
 + sudo apt-get update
 + sudo apt-get upgrade
 
-* Instalar mosquitto
+# Instalar mosquitto
 + sudo apt-get install mosquitto -y
 + sudo apt-get install mosquitto-clients -y
 
-* Configurar mosquitto
-* sudo nano /etc/mosquitto/mosquitto.conf
+# Configurar mosquitto
++ sudo nano /etc/mosquitto/mosquitto.conf
 
 * Dentro deste arquivo, localize a apague a seguinte linha:
 + include_dir /etc/mosquitto/conf.d
@@ -19,8 +20,10 @@ Installation Mosquitto Rasberry Pi Zero W
 + password_file /etc/mosquitto/pwfile
 + listener 1883
 
-* sudo mosquitto_passwd -c /etc/mosquitto/pwfile pi
+# Adicionar Usuario e Senha
++ sudo mosquitto_passwd -c /etc/mosquitto/pwfile pi
 + password:raspberry
 + reenter password:raspberry
 
-* sudo reboot
+# Reniciar Servidor
++ sudo reboot
